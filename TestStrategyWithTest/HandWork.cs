@@ -5,11 +5,11 @@ using System.Text;
 
 namespace TestStrategyWithTest
 {
-    class Work
+    class HandWork : IActionWork
     {
-        public string DoWork(IActionWork actWork)
+        public string DoJob()
         {
-            return actWork.DoJob();
+            return "Выполнился метод из класса HandWork";
         }
     }
 }

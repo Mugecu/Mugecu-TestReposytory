@@ -10,11 +10,20 @@ namespace TestStrategyWithTest
     class TestStrategyWithTestTests
     {
         [Test]
-        public void IsNotEmptyInWorkClass()
+        public void IsNotEmptyInHandWorkClass ()
         {
             Work work = new Work();
 
-            string act = work.DoWork(new HandJob());
+            string act = work.DoWork(new HandWork());
+
+            Assert.IsNotEmpty(act);
+        }
+        [Test]
+        public void IsNotEmptyInFootWorkClass()
+        {
+            Work work = new Work();
+
+            string act = work.DoWork(new FootWork());
 
             Assert.IsNotEmpty(act);
         }
