@@ -9,6 +9,17 @@ namespace TestStrategyWithTest
     {
         static void Main(string[] args)
         {
+            Work work = new Work;
+
+            string footWork = work.DoWork(new FootWork());
+
+            Console.WriteLine(footWork);
+
+            string handJob = work.DoWork(new HandWork());
+
+            Console.WriteLine(handJob);
+
+            Console.ReadKey();
         }
     }
 }
