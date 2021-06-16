@@ -10,6 +10,13 @@ namespace TestStrategyWithTest
     class TestStrategyWithTestTests
     {
         [Test]
+        public void IsNotEmptyInWorkClass()
+        {
+            Work work = new Work();
 
+            string act = work.DoWork(new HandJob());
+
+            Assert.IsNotEmpty(act);
+        }
     }
 }
